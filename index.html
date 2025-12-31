@@ -7,58 +7,70 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { background-color: #0d0d0d; font-family: 'serif'; color: #e5e7eb; }
-        .gold-border { border: 1px solid #d4af37; }
-        .gold-text { color: #d4af37; }
-        .gold-button { background-color: #d4af37; color: #000; transition: all 0.3s ease; }
-        .gold-button:hover { background-color: #b8962e; transform: translateY(-2px); }
+        /* Primary Brand Colors: Red (#E10600), White (#FFFFFF), Black (#000000) */
+        body { background-color: #000000; font-family: 'Helvetica Neue', Arial, sans-serif; color: #FFFFFF; }
+        
+        /* Subtle Gold accent for the 'Royal' feel */
+        .gold-accent { color: #D4AF37; }
+        .gold-border-thin { border: 1px solid rgba(212, 175, 55, 0.3); }
+
+        /* Primary Button: Red with White text */
+        .btn-primary { 
+            background-color: #E10600; 
+            color: #FFFFFF; 
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover { background-color: #b30500; transform: translateY(-2px); }
+
+        /* Secondary Buttons: Black background, White border */
         .link-card { 
-            border: 1px solid #262626; 
-            background: #1a1a1a;
+            border: 1px solid #333; 
+            background: #0f0f0f;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
         }
         .link-card:hover { 
-            border-color: #d4af37; 
+            border-color: #E10600; /* Turns red on hover */
             transform: translateY(-2px);
-            background: #222222;
+            background: #1a1a1a;
         }
-        .icon-box { color: #d4af37; width: 20px; height: 20px; margin-right: 12px; }
+        
+        .icon-style { color: #D4AF37; width: 20px; height: 20px; margin-right: 12px; }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-6 text-center">
 
     <div class="mb-8">
-        <div class="w-24 h-24 mx-auto flex items-center justify-center mb-4 rounded-full border-2 border-[#d4af37] p-1 bg-black shadow-[0_0_20px_rgba(212,175,55,0.2)]">
-            <img src="https://www.greatbritainwaffle.com/wp-content/uploads/2021/05/Logo.png" alt="GBW Logo" class="rounded-full">
+        <div class="w-32 h-32 mx-auto flex items-center justify-center mb-4 rounded-xl border-2 border-[#E10600] p-0 bg-[#E10600] shadow-[0_0_25px_rgba(225,6,0,0.2)] overflow-hidden">
+            <img src="logo.jpg" alt="Great Britain Waffle Logo" class="w-full h-full object-cover">
         </div>
-        <h1 class="text-xl font-bold gold-text uppercase tracking-[0.3em]">Great Britain Waffle</h1>
-        <p class="text-gray-400 italic mt-2 text-sm">"Everything Royal in a Waffle!"</p>
+        <h1 class="text-2xl font-black text-white uppercase tracking-tighter">GREAT <span class="gold-accent">BRITAIN</span> WAFFLE</h1>
+        <p class="text-gray-400 italic mt-1 text-sm">"Everything Royal in a Waffle!"</p>
     </div>
 
-    <div class="w-full max-w-xs space-y-4">
+    <div class="w-full max-w-xs space-y-3">
         
-        <a href="https://www.greatbritainwaffle.com/" class="flex items-center justify-center w-full p-4 font-bold uppercase gold-button rounded-sm shadow-lg">
+        <a href="https://www.greatbritainwaffle.com/" class="flex items-center justify-center w-full p-4 font-bold uppercase btn-primary rounded-lg shadow-lg">
             <i data-lucide="globe" class="w-5 h-5 mr-3"></i> Official Website
         </a>
 
-        <a href="https://share.google/HQss4kU4YXu9AFvZw" class="flex items-center w-full p-4 font-medium rounded-sm link-card">
-            <i data-lucide="map-pin" class="icon-box"></i> <span>Find Us on Google</span>
+        <a href="https://share.google/HQss4kU4YXu9AFvZw" class="flex items-center w-full p-4 font-medium rounded-lg link-card">
+            <i data-lucide="map-pin" class="icon-style"></i> <span>Find Us on Google</span>
         </a>
 
-        <a href="https://in.linkedin.com/company/great-britain-waffle" class="flex items-center w-full p-4 font-medium rounded-sm link-card">
-            <i data-lucide="linkedin" class="icon-box"></i> <span>LinkedIn</span>
+        <a href="https://in.linkedin.com/company/great-britain-waffle" class="flex items-center w-full p-4 font-medium rounded-lg link-card">
+            <i data-lucide="linkedin" class="icon-style"></i> <span>LinkedIn</span>
         </a>
 
-        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="flex items-center w-full p-4 font-medium rounded-sm link-card">
-            <i data-lucide="instagram" class="icon-box"></i> <span>Instagram</span>
+        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="flex items-center w-full p-4 font-medium rounded-lg link-card">
+            <i data-lucide="instagram" class="icon-style"></i> <span>Instagram</span>
         </a>
 
-        <a href="https://www.facebook.com/greatbritainwaffle/" class="flex items-center w-full p-4 font-medium rounded-sm link-card">
-            <i data-lucide="facebook" class="icon-box"></i> <span>Facebook</span>
+        <a href="https://www.facebook.com/greatbritainwaffle/" class="flex items-center w-full p-4 font-medium rounded-lg link-card">
+            <i data-lucide="facebook" class="icon-style"></i> <span>Facebook</span>
         </a>
 
-        <a href="mailto:wecare@greatbritainwaffle.com" class="flex items-center w-full p-4 font-medium rounded-sm link-card">
-            <i data-lucide="mail" class="icon-box"></i> <span>Email Support</span>
+        <a href="mailto:wecare@greatbritainwaffle.com" class="flex items-center w-full p-4 font-medium rounded-lg link-card">
+            <i data-lucide="mail" class="icon-style"></i> <span>Email Support</span>
         </a>
 
     </div>
