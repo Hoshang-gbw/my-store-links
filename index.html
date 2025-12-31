@@ -72,9 +72,11 @@
             box-shadow: 0 10px 25px rgba(203, 32, 45, 0.4) !important;
         }
 
+        /* Fixed: Logos now fill the button area properly */
         .delivery-img {
-            height: 24px;
-            width: auto;
+            height: auto;
+            width: 85%; /* Scaled to fill the button width */
+            max-height: 40px; /* Limits height to keep button professional */
             object-fit: contain;
         }
 
@@ -110,10 +112,10 @@
         <div class="pt-4 mb-2 text-[10px] font-bold text-gray-400 tracking-widest uppercase text-center fade-in-up" style="animation-delay: 0.4s">Order Online</div>
         
         <div class="grid grid-cols-2 gap-2 fade-in-up mb-6" style="animation-delay: 0.5s">
-            <a href="https://www.zomato.com/ahmedabad/great-britain-waffle-gurukul/order" class="nav-link zomato-btn !mb-0 px-2">
+            <a href="https://www.zomato.com/ahmedabad/great-britain-waffle-gurukul/order" class="nav-link zomato-btn !mb-0 px-2 h-16">
                 <img src="Z-logo1bg.png" class="delivery-img" alt="Zomato">
             </a>
-            <a href="https://www.swiggy.com/city/ahmedabad/great-britain-waffle-sunrise-park-road-vastrapur-rest711008?utm_source=GooglePlaceOrder" class="nav-link swiggy-btn !mb-0 px-2">
+            <a href="https://www.swiggy.com/city/ahmedabad/great-britain-waffle-sunrise-park-road-vastrapur-rest711008?utm_source=GooglePlaceOrder" class="nav-link swiggy-btn !mb-0 px-2 h-16">
                 <img src="S-logobg.png" class="delivery-img" alt="Swiggy">
             </a>
         </div>
