@@ -3,77 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Great Britain Waffle | Links</title>
+    <title>Great Britain Waffle | Official Links</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Forces the background to be deep black */
-        body { background-color: #000000; color: #FFFFFF; font-family: sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         
-        /* Uniform button style: Black background, Red border, White text */
-        .uniform-button { 
-            border: 1px solid #E10600; 
-            background-color: #000000;
-            color: #FFFFFF;
-            transition: all 0.2s ease-in-out;
+        body { 
+            background-color: #000000; 
+            color: #FFFFFF; 
+            font-family: 'Inter', sans-serif; 
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* The main website button is solid Red */
-        .primary-red {
-            background-color: #E10600;
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1.1rem;
+            margin-bottom: 0.75rem;
             border: 1px solid #E10600;
+            background-color: transparent;
             color: #FFFFFF;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
         }
 
-        /* Hover effect for all buttons: Glow Red */
-        .uniform-button:hover, .primary-red:hover {
+        .nav-link:hover, .nav-link:active {
             background-color: #E10600;
             color: #FFFFFF;
-            transform: scale(1.02);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(225, 6, 0, 0.2);
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem auto;
+            border: 2px solid #E10600;
+            border-radius: 12px;
+            padding: 8px;
+            background: #E10600;
+            box-shadow: 0 0 30px rgba(225, 6, 0, 0.15);
         }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen p-6 text-center">
+<body class="flex flex-col items-center justify-start min-h-screen p-8 pt-12">
 
-    <div class="mb-8">
-        <h1 class="text-2xl font-black text-white uppercase tracking-tighter">GREAT BRITAIN WAFFLE</h1>
-        <p class="text-gray-400 italic mt-1 text-sm">"Everything Royal in a Waffle!"</p>
-    </div>
+    <header class="mb-10 w-full max-w-xs text-center">
+        <div class="logo-container">
+            <img src="logo.png" alt="Great Britain Waffle Logo" class="w-full h-full object-contain">
+        </div>
+        <h1 class="text-2xl font-black tracking-widest text-white uppercase">GREAT BRITAIN WAFFLE</h1>
+        <div class="h-1 w-12 bg-[#E10600] mx-auto mt-3 mb-3"></div>
+        <p class="text-gray-400 text-xs italic tracking-wide">"Everything Royal in a Waffle!"</p>
+    </header>
 
-    <div class="w-full max-w-xs space-y-4">
+    <nav class="w-full max-w-xs">
         
-        <a href="https://www.greatbritainwaffle.com/" class="flex items-center justify-center w-full p-4 font-bold uppercase primary-red rounded-lg shadow-lg">
-            <i data-lucide="globe" class="w-5 h-5 mr-3"></i> Official Website
+        <button onclick="downloadVCard()" class="nav-link bg-white !text-black border-white hover:!bg-[#E10600] hover:!border-[#E10600] hover:!text-white">
+            <i data-lucide="user-plus" class="w-4 h-4 mr-3"></i> SAVE OUR CONTACT
+        </button>
+
+        <a href="https://www.greatbritainwaffle.com/" class="nav-link">
+            <i data-lucide="globe" class="w-4 h-4 mr-3"></i> OFFICIAL WEBSITE
         </a>
 
-        <a href="https://share.google/HQss4kU4YXu9AFvZw" class="flex items-center w-full p-4 font-medium rounded-lg uniform-button">
-            <i data-lucide="map-pin" class="w-5 h-5 mr-3"></i> <span>Find Us on Google</span>
+        <a href="https://share.google/HQss4kU4YXu9AFvZw" class="nav-link">
+            <i data-lucide="map-pin" class="w-4 h-4 mr-3"></i> FIND US ON GOOGLE
         </a>
 
-        <a href="https://in.linkedin.com/company/great-britain-waffle" class="flex items-center w-full p-4 font-medium rounded-lg uniform-button">
-            <i data-lucide="linkedin" class="w-5 h-5 mr-3"></i> <span>LinkedIn</span>
+        <a href="https://in.linkedin.com/company/great-britain-waffle" class="nav-link">
+            <i data-lucide="linkedin" class="w-4 h-4 mr-3"></i> LINKEDIN
         </a>
 
-        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="flex items-center w-full p-4 font-medium rounded-lg uniform-button">
-            <i data-lucide="instagram" class="w-5 h-5 mr-3"></i> <span>Instagram</span>
+        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="nav-link">
+            <i data-lucide="instagram" class="w-4 h-4 mr-3"></i> INSTAGRAM
         </a>
 
-        <a href="https://www.facebook.com/greatbritainwaffle/" class="flex items-center w-full p-4 font-medium rounded-lg uniform-button">
-            <i data-lucide="facebook" class="w-5 h-5 mr-3"></i> <span>Facebook</span>
+        <a href="https://www.facebook.com/greatbritainwaffle/" class="nav-link">
+            <i data-lucide="facebook" class="w-4 h-4 mr-3"></i> FACEBOOK
         </a>
 
-        <a href="mailto:wecare@greatbritainwaffle.com" class="flex items-center w-full p-4 font-medium rounded-lg uniform-button">
-            <i data-lucide="mail" class="w-5 h-5 mr-3"></i> <span>Email Support</span>
+        <a href="mailto:wecare@greatbritainwaffle.com" class="nav-link">
+            <i data-lucide="mail" class="w-4 h-4 mr-3"></i> EMAIL SUPPORT
         </a>
 
-    </div>
+    </nav>
 
-    <footer class="mt-12 text-gray-600 text-[10px] tracking-widest uppercase">
-        © Copyright Great Britain Waffle 2025. <br> All Rights Reserved.
+    <footer class="mt-auto pt-12 text-center">
+        <p class="text-[9px] text-gray-500 uppercase tracking-[0.3em] leading-relaxed">
+            © Copyright Great Britain Waffle 2025<br>All Rights Reserved
+        </p>
     </footer>
 
     <script>
-      lucide.createIcons();
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Function to generate and download Contact Card
+        function downloadVCard() {
+            const vcard = "BEGIN:VCARD\n" +
+                        "VERSION:3.0\n" +
+                        "FN:Great Britain Waffle\n" +
+                        "ORG:Great Britain Waffle\n" +
+                        "TEL;TYPE=CELL:9924754866\n" +
+                        "TEL;TYPE=CELL:6352387720\n" +
+                        "EMAIL:wecare@greatbritainwaffle.com\n" +
+                        "URL:https://www.greatbritainwaffle.com\n" +
+                        "END:VCARD";
+            
+            const blob = new Blob([vcard], { type: "text/vcard" });
+            const url = window.URL.createObjectURL(blob);
+            const newLink = document.createElement("a");
+            newLink.href = url;
+            newLink.setAttribute("download", "Great_Britain_Waffle.vcf");
+            newLink.click();
+        }
     </script>
 </body>
 </html>
