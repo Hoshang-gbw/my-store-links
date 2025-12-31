@@ -7,19 +7,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Luxury Serif Font for Titles, Clean Sans for Buttons */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;600&display=swap');
+        /* Montserrat for the Logo-style Boldness, Caveat for the Website-style Tagline */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Caveat:wght@700&display=swap');
         
         body { 
             background-color: #050505; 
             background-image: radial-gradient(#1a1a1a 0.5px, transparent 0.5px);
             background-size: 30px 30px;
             color: #FFFFFF; 
-            font-family: 'Inter', sans-serif; 
+            font-family: 'Montserrat', sans-serif; 
             -webkit-font-smoothing: antialiased;
         }
 
-        .serif-title { font-family: 'Playfair Display', serif; }
+        /* Matches the tight, heavy logo font */
+        .brand-font { 
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.05em; 
+            line-height: 0.9;
+        }
+
+        /* Matches the handwritten website tagline */
+        .tagline-font { 
+            font-family: 'Caveat', cursive;
+            font-size: 1.6rem;
+        }
+
+        .royal-highlight {
+            background-color: #FFD700;
+            color: #000;
+            padding: 0 10px;
+            display: inline-block;
+            transform: rotate(-3deg);
+            border-radius: 2px;
+        }
 
         .fade-in-up {
             animation: fadeInUp 0.6s ease forwards;
@@ -42,7 +62,7 @@
             background: rgba(0, 0, 0, 0.8);
             color: #FFFFFF;
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 0.1em;
             font-size: 0.75rem;
             border-radius: 4px;
@@ -55,7 +75,6 @@
             box-shadow: 0 10px 25px rgba(225, 6, 0, 0.3);
         }
 
-        /* Specialized Styling for Delivery Buttons */
         .delivery-btn {
             background: #ffffff;
             color: #000000;
@@ -81,15 +100,17 @@
         <div class="logo-container">
             <img src="logo.png" alt="Great Britain Waffle" class="w-full h-full object-contain">
         </div>
-        <h1 class="text-3xl serif-title font-black text-white italic">Great Britain</h1>
-        <h2 class="text-xl font-light tracking-[0.5em] text-[#E10600] -mt-1 uppercase">Waffle</h2>
-        <p class="text-gray-500 text-[10px] tracking-[0.2em] mt-4 uppercase">Everything Royal in a Waffle!</p>
+        <h1 class="text-3xl brand-font font-black text-white uppercase">Great Britain Waffle</h1>
+        
+        <p class="tagline-font text-white mt-4">
+            Everything <span class="royal-highlight">Royal</span> In A Waffle
+        </p>
     </header>
 
     <nav class="w-full max-w-xs">
         
         <button onclick="downloadVCard()" class="nav-link fade-in-up border-white mb-8" style="animation-delay: 0.2s">
-            <i data-lucide="user-plus" class="w-4 h-4 mr-3"></i> Save Contact
+            <i data-lucide="user-plus" class="w-4 h-4 mr-3"></i> Save Our Contact
         </button>
 
         <a href="https://www.greatbritainwaffle.com/" class="nav-link fade-in-up bg-[#E10600]" style="animation-delay: 0.3s">
@@ -107,22 +128,30 @@
         </div>
 
         <a href="https://share.google/HQss4kU4YXu9AFvZw" class="nav-link fade-in-up" style="animation-delay: 0.6s">
-            <i data-lucide="map-pin" class="w-4 h-4 mr-3"></i> Visit Store
+            <i data-lucide="map-pin" class="w-4 h-4 mr-3"></i> Find Us On Google
         </a>
 
-        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="nav-link fade-in-up" style="animation-delay: 0.7s">
+        <a href="https://in.linkedin.com/company/great-britain-waffle" class="nav-link fade-in-up" style="animation-delay: 0.7s">
+            <i data-lucide="linkedin" class="icon-style"></i> <span>LinkedIn</span>
+        </a>
+
+        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="nav-link fade-in-up" style="animation-delay: 0.8s">
             <i data-lucide="instagram" class="w-4 h-4 mr-3"></i> Instagram
         </a>
 
-        <a href="https://www.facebook.com/greatbritainwaffle/" class="nav-link fade-in-up" style="animation-delay: 0.8s">
+        <a href="https://www.facebook.com/greatbritainwaffle/" class="nav-link fade-in-up" style="animation-delay: 0.9s">
             <i data-lucide="facebook" class="w-4 h-4 mr-3"></i> Facebook
+        </a>
+
+        <a href="mailto:wecare@greatbritainwaffle.com" class="nav-link fade-in-up" style="animation-delay: 1.0s">
+            <i data-lucide="mail" class="w-4 h-4 mr-3"></i> Email Support
         </a>
 
     </nav>
 
-    <footer class="mt-auto pt-12 text-center fade-in-up" style="animation-delay: 1s">
+    <footer class="mt-auto pt-12 text-center fade-in-up" style="animation-delay: 1.2s">
         <p class="text-[9px] text-gray-600 uppercase tracking-[0.3em]">
-            © Great Britain Waffle 2025
+            © Copyright Great Britain Waffle 2025. <br> All Rights Reserved.
         </p>
     </footer>
 
