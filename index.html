@@ -7,49 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Primary Brand Colors: Red (#E10600), White (#FFFFFF), Black (#000000) */
-        body { background-color: #000000; font-family: 'Helvetica Neue', Arial, sans-serif; color: #FFFFFF; }
+        /* BRAND COLORS: Red (#E10600), Black (#000000), White (#FFFFFF) */
+        body { background-color: #000000; font-family: 'ui-sans-serif', system-ui, sans-serif; color: #FFFFFF; }
         
-        /* Subtle Gold accent for the 'Royal' feel */
-        .gold-accent { color: #D4AF37; }
-        .gold-border-thin { border: 1px solid rgba(212, 175, 55, 0.3); }
-
-        /* Primary Button: Red with White text */
-        .btn-primary { 
+        /* Main Red Button */
+        .btn-red { 
             background-color: #E10600; 
             color: #FFFFFF; 
             transition: all 0.3s ease;
         }
-        .btn-primary:hover { background-color: #b30500; transform: translateY(-2px); }
+        .btn-red:hover { background-color: #b30500; transform: scale(1.02); }
 
-        /* Secondary Buttons: Black background, White border */
+        /* Secondary Black Buttons with Red Hover */
         .link-card { 
-            border: 1px solid #333; 
+            border: 1px solid #262626; 
             background: #0f0f0f;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            color: #FFFFFF;
+            transition: all 0.3s ease; 
         }
         .link-card:hover { 
-            border-color: #E10600; /* Turns red on hover */
-            transform: translateY(-2px);
+            border-color: #E10600; 
             background: #1a1a1a;
+            color: #E10600;
         }
         
-        .icon-style { color: #D4AF37; width: 20px; height: 20px; margin-right: 12px; }
+        /* Icon color - making them WHITE so they stand out, or RED on hover */
+        .icon-style { width: 20px; height: 20px; margin-right: 12px; }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-6 text-center">
 
     <div class="mb-8">
-        <div class="w-32 h-32 mx-auto flex items-center justify-center mb-4 rounded-xl border-2 border-[#E10600] p-0 bg-[#E10600] shadow-[0_0_25px_rgba(225,6,0,0.2)] overflow-hidden">
-            <img src="logo.jpg" alt="Great Britain Waffle Logo" class="w-full h-full object-cover">
+        <div class="w-32 h-32 mx-auto flex items-center justify-center mb-4 rounded-xl border-2 border-[#E10600] bg-[#E10600] overflow-hidden shadow-[0_0_20px_rgba(225,6,0,0.3)]">
+            <img src="logo.jpg" alt="Great Britain Waffle Logo" class="w-full h-full object-contain p-2">
         </div>
-        <h1 class="text-2xl font-black text-white uppercase tracking-tighter">GREAT <span class="gold-accent">BRITAIN</span> WAFFLE</h1>
+        <h1 class="text-2xl font-black text-white uppercase tracking-tighter">GREAT BRITAIN WAFFLE</h1>
         <p class="text-gray-400 italic mt-1 text-sm">"Everything Royal in a Waffle!"</p>
     </div>
 
     <div class="w-full max-w-xs space-y-3">
         
-        <a href="https://www.greatbritainwaffle.com/" class="flex items-center justify-center w-full p-4 font-bold uppercase btn-primary rounded-lg shadow-lg">
+        <a href="https://www.greatbritainwaffle.com/" class="flex items-center justify-center w-full p-4 font-bold uppercase btn-red rounded-lg shadow-lg">
             <i data-lucide="globe" class="w-5 h-5 mr-3"></i> Official Website
         </a>
 
