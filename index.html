@@ -52,7 +52,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Standard Red Glow */
         .nav-link:hover {
             background-color: #E10600;
             transform: scale(1.02);
@@ -74,10 +73,9 @@
         }
 
         .delivery-img {
-            height: 20px;
-            margin-right: 10px;
+            height: 24px;
+            width: auto;
             object-fit: contain;
-            filter: brightness(1.2);
         }
 
         .logo-container {
@@ -101,9 +99,9 @@
 
     <nav class="w-full max-w-xs">
         
-        <button onclick="downloadVCard()" class="nav-link fade-in-up border-white mb-8" style="animation-delay: 0.2s">
-            <i data-lucide="user-plus" class="w-4 h-4 mr-3"></i> Save Our Contact
-        </button>
+        <a href="tel:9924754866" class="nav-link fade-in-up border-white mb-8" style="animation-delay: 0.2s">
+            <i data-lucide="phone" class="w-4 h-4 mr-3 text-white"></i> Call Our Store
+        </a>
 
         <a href="https://www.greatbritainwaffle.com/" class="nav-link fade-in-up bg-[#E10600]" style="animation-delay: 0.3s">
             <i data-lucide="globe" class="w-4 h-4 mr-3"></i> Official Website
@@ -113,10 +111,10 @@
         
         <div class="grid grid-cols-2 gap-2 fade-in-up mb-6" style="animation-delay: 0.5s">
             <a href="https://www.zomato.com/ahmedabad/great-britain-waffle-gurukul/order" class="nav-link zomato-btn !mb-0 px-2">
-                <img src="Z-logo1.jpg" class="delivery-img" alt="Zomato"> Zomato
+                <img src="Z-logo1.jpg" class="delivery-img" alt="Zomato">
             </a>
             <a href="https://www.swiggy.com/city/ahmedabad/great-britain-waffle-sunrise-park-road-vastrapur-rest711008?utm_source=GooglePlaceOrder" class="nav-link swiggy-btn !mb-0 px-2">
-                <img src="S-logo.jpg" class="delivery-img" alt="Swiggy"> Swiggy
+                <img src="S-logo.jpg" class="delivery-img" alt="Swiggy">
             </a>
         </div>
 
@@ -124,15 +122,19 @@
             <i data-lucide="map-pin" class="w-4 h-4 mr-3"></i> Find Us On Google
         </a>
 
-        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="nav-link fade-in-up" style="animation-delay: 0.7s">
+        <a href="https://in.linkedin.com/company/great-britain-waffle" class="nav-link fade-in-up" style="animation-delay: 0.7s">
+            <i data-lucide="linkedin" class="w-4 h-4 mr-3"></i> LinkedIn
+        </a>
+
+        <a href="https://www.instagram.com/greatbritainwaffle/?hl=en" class="nav-link fade-in-up" style="animation-delay: 0.8s">
             <i data-lucide="instagram" class="w-4 h-4 mr-3"></i> Instagram
         </a>
 
-        <a href="https://www.facebook.com/greatbritainwaffle/" class="nav-link fade-in-up" style="animation-delay: 0.8s">
+        <a href="https://www.facebook.com/greatbritainwaffle/" class="nav-link fade-in-up" style="animation-delay: 0.9s">
             <i data-lucide="facebook" class="w-4 h-4 mr-3"></i> Facebook
         </a>
 
-        <a href="mailto:wecare@greatbritainwaffle.com" class="nav-link fade-in-up" style="animation-delay: 0.9s">
+        <a href="mailto:wecare@greatbritainwaffle.com" class="nav-link fade-in-up" style="animation-delay: 1.0s">
             <i data-lucide="mail" class="w-4 h-4 mr-3"></i> Email Support
         </a>
 
@@ -146,15 +148,6 @@
 
     <script>
         lucide.createIcons();
-        function downloadVCard() {
-            const vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:Great Britain Waffle\nTEL;TYPE=CELL:9924754866\nTEL;TYPE=CELL:6352387720\nEMAIL:wecare@greatbritainwaffle.com\nEND:VCARD";
-            const blob = new Blob([vcard], { type: "text/vcard" });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = "GBW_Contact.vcf";
-            a.click();
-        }
     </script>
 </body>
 </html>
